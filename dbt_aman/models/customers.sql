@@ -2,6 +2,8 @@
     materialized = 'table'
 )}}
 
+with customers as (
+
 SELECT
   a.id,
   name,
@@ -21,4 +23,6 @@ GROUP BY
 ORDER BY
   first_order_at
 LIMIT
-  5
+  5)
+
+  select * from customers
